@@ -1,4 +1,5 @@
 import "dotenv/config";
+import mongoose from "mongoose";
 import express from "express";
 import Hello from "./Hello.js";
 import Lab5 from "./Lab5/index.js";
@@ -30,6 +31,7 @@ if (process.env.NODE_ENV !== "development") {               // in production
 		domain: process.env.NODE_SERVER_DOMAIN,
 	};
 }
+mongoose.connect(process.env.CONNECTION_STRING);
 app.use(session(sessionOptions));
 app.use(express.json());
 Hello(app);
