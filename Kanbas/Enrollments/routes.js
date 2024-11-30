@@ -18,3 +18,4 @@ export default function EnrollmentsRoutes(app) {
     app.post("/api/enrollments/current/courses/:courseId", enrollInCourse);
 	app.delete("/api/enrollments/current/courses/:courseId", unenrollFromCourse);
 };
+
