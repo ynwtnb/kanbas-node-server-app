@@ -104,7 +104,9 @@ export default function UserRoutes(app) {
 	const createCourse = (req, res) => {
 		const currentUser = req.session["currentUser"];
 		const newCourse = courseDao.createCourse(req.body);
-		enrollmentsDao.enrollUserInCourse(currentUser._id, newCourse._id);
+		if (currentUser.role === 'FACULTY') {
+			enrollmentsDao.enrollUserInCourse(currentUser._id, newCourse._id);
+		}
 		res.json(newCourse);
 	};
 
