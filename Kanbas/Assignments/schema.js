@@ -87,7 +87,7 @@ const assignmentSchema = new mongoose.Schema(
                 points: Number,
                 quizType: {
                     type: String,
-                    enum: ["Multiple Choice", "True/False", "Fill in the Blank", "Matching", "Short Answer", "Essay"],
+                    enum: ["Multiple Choice", "True/False", "Fill in the Blank"],
                 },
                 options: [
                     {
