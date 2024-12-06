@@ -23,4 +23,7 @@ export function updateAssignment(assignmentId, assignmentUpdates) {
 	// Object.assign(assignment, assignmentUpdates);
 	// return assignment;
 	return model.updateOne({ _id: assignmentId }, { $set: assignmentUpdates });
-}
+};
+export function findAssignmentById(assignmentId) {
+	return model.findById(assignmentId);
+};
