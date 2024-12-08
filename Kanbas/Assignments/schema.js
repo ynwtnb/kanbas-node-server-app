@@ -94,6 +94,7 @@ const assignmentSchema = new mongoose.Schema(
                         _id: String,
                         answer: String,
                         correct: Boolean,
+                        caseSensitive: Boolean,
                     },
                 ],
             },
